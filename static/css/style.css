@@ -550,21 +550,40 @@ footer {
 
 
 /* RESPONSIVE */
+/* RESPONSIVE PARA DISPOSITIVOS MÓVILES */
 @media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column; /* Menú vertical */
-        gap: 0.5rem; /* Espaciado pequeño */
-    }
-
     .hero h2 {
-        font-size: 2rem; /* Título más pequeño */
+        font-size: 2rem;
     }
 
     .section-title {
-        font-size: 2rem; /* Título más pequeño */
+        font-size: 2rem;
     }
 
     .contact-info {
-        justify-content: center; /* Centra contactos */
+        justify-content: center;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .nav-container img {
+        max-width: 180px;
+        height: auto;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1rem;
+        padding: 0;
+    }
+
+    .nav-menu li a {
+        font-size: 0.9rem;
     }
 }
