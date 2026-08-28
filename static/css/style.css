@@ -648,3 +648,21 @@ footer {
 .wa-option:hover {
     background-color: #f0f0f0;
 }
+/* Reducir el alto del contenedor del menú */
+header nav, .navbar, .nav-container {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    min-height: auto !important;
+}
+
+/* Reducir el tamaño del logo para que no fuerce la altura */
+header nav img, .navbar img, .logo img {
+    max-height: 45px !important; /* Ajusta la altura del logo */
+    width: auto;
+}
+
+/* Reducir el espaciado de los enlaces del menú */
+header nav a, .navbar a {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
