@@ -160,7 +160,7 @@ nav {
 
 /*  SECCION SUPERIOR DE PAGINA  */
 .hero { /* Fondo principal tipo portada */
-    background: linear-gradient(135deg, rgba(30, 59, 114, 0.116), rgba(42, 82, 152, 0.9)), /* Degradado */
+    background: linear-gradient(135deg, rgba(30, 59, 114, 0.4), rgba(42, 82, 152, 0.5)), /* Degradado */
                url('../fonts/empleados.jpg') center/cover; /* Imagen de fondo */
     color: white; /* Texto blanco */
     padding: 6rem 0; /* Espaciado vertical grande */
