@@ -1,0 +1,570 @@
+* { /* Selecciona todos los elementos */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina padding por defecto */
+    box-sizing: border-box; /* Incluye borde y padding en el tamaño total */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipo de letra */
+    background: white; /* Color de fondo general */
+    color: #333; /* Color del texto */
+    line-height: 1.6; /* Altura entre líneas, mejora lectura */
+}
+
+/* HEADER ---------------------- */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Degradado del header */
+    color: white; /* Color de texto */
+    padding: 1rem 0; /* Espaciado interno arriba y abajo */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra debajo del header */
+   /* position: sticky; */ /* Haría que el header siga al hacer scroll */
+    top: 0; /* Posición superior (si sticky se activa) */
+    z-index: 1000; /* Lo mantiene por encima de otros elementos */
+}
+
+.header-top {
+    background: #1a2f5a; /* Color del tope superior */
+    padding: 0.8rem 0; /* Espaciado interno */
+    position: sticky; /* Se mantiene visible al hacer scroll */
+}
+
+.header-top .container {
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Distribuye los elementos: contact-info a la izquierda, Boton-iniciar a la derecha */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; 
+    gap: 0.5rem; 
+}
+
+.linkswhatsapp {
+    white-space: nowrap; /* Fuerza a que el texto se quede en una sola línea, evitando que salte de renglón si el contenedor es muy estrecho. */
+    font-size: 1rem;     /* Define el tamaño de la fuente del texto (1rem es típicamente el tamaño base del navegador). */
+    font-weight: bold;   /* Texto negrita. */
+ 
+}
+
+.linkswhatsapp a {
+   /* Puedes añadir estilos específicos al enlace aquí, si necesitas color o quitar el subrayado */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: white; /* Por ejemplo, si el fondo es oscuro */
+    
+    /* ⬅️ ¡Añade esta línea! Hace que los cambios de estilo sean suaves */
+    transition: all 0.3s ease; 
+    
+    /* Opcional: Dale un poco de relleno y bordes redondeados para que parezca un botón real */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+
+
+}
+
+.btn-login {
+    background: #1b3b6f;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #274b8a;
+}
+
+.Boton-iniciar {
+    white-space: nowrap; /* Fuerza a que el texto se quede en una sola línea, evitando que salte de renglón si el contenedor es muy estrecho. */
+    font-size: 1rem;     /* Define el tamaño de la fuente del texto (1rem es típicamente el tamaño base del navegador). */
+    font-weight: bold;   /* Texto negrita. */
+}
+
+.Boton-iniciar a {
+    /* Puedes añadir estilos específicos al enlace aquí, si necesitas color o quitar el subrayado */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: white; /* Por ejemplo, si el fondo es oscuro */
+    
+    /* ⬅️ ¡Añade esta línea! Hace que los cambios de estilo sean suaves */
+    transition: all 0.3s ease; 
+    
+    /* Opcional: Dale un poco de relleno y bordes redondeados para que parezca un botón real */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.Boton-iniciar a:hover {
+    /* El efecto  un fondo semitransparente blanco para "iluminar" */
+    background: rgba(255, 255, 255, 0.2); 
+    
+    /* Opcional: Puedes añadir un pequeño efecto de elevación como en el menú */
+    transform: translateY(-2px);
+}
+.contact-info {
+    display: flex; /* Para alinear el logo, iconos y números de teléfono */
+    gap: 0.2rem; 
+    flex-wrap: wrap; 
+    font-size: 0.9rem; 
+}
+.contact-info div {
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centra verticalmente */
+    gap: 0.5rem; /* Separación entre icono y texto */
+}
+
+nav {
+    background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%); /* Degradado del menú */
+    padding: 1rem 0; /* Espaciado vertical */
+}
+
+.nav-container {
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Título a la izquierda, menú a la derecha */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* HEADER LOGO --------------------- */
+.logo h1 {
+    font-size: 2.5rem; /* Tamaño grande para el logo */
+    font-weight: bold; /* Texto grueso */
+    letter-spacing: 3px; /* Espaciado entre letras */
+}
+
+.nav-menu { /* Contenedor de los ítems del menú */
+    display: flex; /* Los pone en fila */
+    list-style: none; /* Quita los puntos de lista */
+    gap: 2rem; /* Separación entre opciones */
+    font-size: 2rem; /* Tamaño del texto */
+}
+
+.nav-menu a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita subrayado */
+    font-weight: 500; /* Mediano */
+    transition: all 0.3s; /* Animación suave */
+    padding: 0.5rem 1rem; /* Relleno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.nav-menu a:hover {
+    background: rgba(255,255,255,0.2); /* Fondo semitransparente */
+    transform: translateY(-2px); /* Se levanta al pasar el mouse */
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 0 1rem; /* Espaciado lateral */
+}
+
+/*  SECCION SUPERIOR DE PAGINA  */
+.hero { /* Fondo principal tipo portada */
+    background: linear-gradient(135deg, rgba(30, 59, 114, 0.116), rgba(42, 82, 152, 0.9)), /* Degradado */
+                url('/static/fonts/empleados.jpg') center/cover; /* Imagen de fondo */
+    color: white; /* Texto blanco */
+    padding: 6rem 0; /* Espaciado vertical grande */
+    text-align: center; /* Centra el contenido */
+}
+
+.hero h2 {
+    font-size: 3rem; /* Título principal grande */
+    margin-bottom: 1rem; /* Separación del texto de abajo */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra al texto */
+}
+
+.hero p {
+    font-size: 1.3rem; /* Texto debajo del título */
+    margin-bottom: 2rem; /* Separación inferior */
+    opacity: 0.95; /* Ligera transparencia */
+}
+
+.btn {
+    display: inline-block; /* Se comporta como botón */
+    padding: 1rem 2rem; /* Relleno interno */
+    background: #0066cc; /* Color del botón */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto grueso */
+    transition: all 0.3s; /* Animación suave */
+    border: 2px solid #0066cc; /* Borde del botón */
+}
+
+.btn:hover {
+    background: white; /* Cambia color al pasar */
+    color: #0066cc; /* Texto azul */
+    transform: translateY(-3px); /* Se levanta */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra */
+}
+
+/* SECCIONES GENERALES */
+section {
+    padding: 2.5rem 0; /* Espaciado vertical de cada sección */
+}
+
+.section-title {
+    text-align: center; /* Centra el título */
+    color: #1e3c72; /* Azul corporativo */
+    font-size: 2.5rem; /* Tamaño grande */
+    margin-bottom: 1.5rem; /* Espacio inferior */
+    position: relative; /* Necesario para la línea decorativa */
+    padding-bottom: 1rem; /* Separación antes de la línea */
+}
+
+.section-title::after {
+    content: ''; /* Elemento decorativo */
+    position: absolute; /* Posición libre */
+    bottom: 0; /* Abajo del título */
+    left: 50%; /* Centrado */
+    transform: translateX(-50%); /* Ajusta centro real */
+    width: 100px; /* Ancho de la línea */
+    height: 4px; /* Alto de la línea */
+    background: linear-gradient(90deg, #1e3c72, #2a5298); /* Color de la línea */
+    border-radius: 2px; /* Bordes redondeados */
+}
+
+/* USUARIOS */
+
+#usuarios {
+    padding-bottom: 0; /* Quita el espacio sobrante debajo de las tarjetas */
+}
+.usuarios-grid {
+    display: grid; /* Activa grid */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive automático */
+    gap: 1.5rem; /* Separación entre tarjetas */
+}
+
+.usuario-card {
+    background: white; /* Fondo blanco */
+    border: 2px solid #e0e0e0; /* Borde gris */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 1.2rem; /* Espaciado interno */
+    text-align: center; /* Centra contenido */
+    transition: all 0.3s; /* Animación suave */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Sombra suave */
+}
+
+.usuario-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    border-color: #2a5298; /* Cambia el borde a azul */
+    box-shadow: 0 10px 25px rgba(42,82,152,0.2); /* Sombra azulada */
+}
+
+.usuario-card h3 {
+    color: #1e3c72; /* Color del título */
+    font-size: 1.3rem; /* Tamaño de fuente */
+    margin-bottom: 1rem; /* Espacio inferior */
+}
+
+.usuario-card .icon {
+    font-size: 2.2rem; /* Tamaño grande de ícono */
+    margin-bottom: 1rem; /* Espacio inferior */
+}
+
+/* SERVICIOS */
+.servicios-grid {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Tarjetas responsivas */
+    gap: 2rem; /* Separación */
+}
+
+.servicios-flex-large {
+/* 1. Habilita Flexbox para este contenedor */
+    display: flex;
+
+    /* 2. Alinea los elementos hijos al inicio del eje principal (horizontal) */
+    justify-content: flex-start; /* O 'space-between' si quieres separarlos más */
+
+    /* 3. Centra los elementos hijos en el eje transversal (vertical) */
+    align-items: center;
+
+    /* 4. Opcional: Para evitar que el contenido se salga del ancho */
+    width: 100%;
+
+    /* Opcional: Un poco de espacio entre los servicios si es el contenedor de cada item */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Solo para visualización */
+}
+
+.servicio-card {
+    background: #f8f9fa; /* Fondo gris muy claro */
+    border-left: 4px solid #2a5298; /* Línea azul al lado izquierdo */
+    padding: 1.5rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s; /* Animación */
+}
+
+.servicio-card:hover {
+    background: #e3f2fd; /* Color azul claro */
+    transform: translateX(10px); /* Se mueve a la derecha */
+    box-shadow: 0 5px 15px rgba(42,82,152,0.15); /* Sombra */
+}
+
+.servicio-card h3 {
+    color: #1e3c72; /* Azul corporativo */
+    margin-bottom: 0.5rem; /* Separación */
+    display: flex; /* Permite icono + texto */
+    align-items: center; /* Centrado vertical */
+    gap: 0.5rem; /* Espaciado */
+}
+
+.servicio-card p {
+    color: #666; /* Gris del texto */
+    font-size: 0.95rem; /* Tamaño de letra */
+}
+
+/* PRODUCTOS */
+.productos-grid {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Móvil automático */
+    gap: 2rem; /* Espaciado entre productos */
+}
+
+.producto-card {
+    background: white; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta contenido que sobresalga */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra */
+    transition: all 0.3s; /* Animación */
+}
+
+.producto-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0 10px 25px rgba(42,82,152,0.2); /* Sombra intensa */
+}
+
+.producto-img {
+    width: 100%; /* Ancho completo */
+    height: 50px; /* Alto fijo */
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Degradado si no hay imagen */
+    display: flex; /* Centra el icono */
+    align-items: center;
+    justify-content: center;
+    color: white; /* Color del icono */
+    font-size: 3rem; /* Tamaño del icono */
+}
+
+.producto-info {
+    padding: 1.5rem; /* Espaciado interno */
+}
+
+.producto-info h3 {
+    color: #1e3c72; /* Azul corporativo */
+    margin-bottom: 0.5rem; /* Espaciado */
+}
+
+.producto-info p {
+    color: #666; /* Gris */
+    font-size: 0.9rem; /* Tamaño letra */
+}
+
+/* MISIÓN Y VISIÓN */
+.mision-vision {
+    display: grid; /* Layout grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive */
+    gap: 2rem; /* Espaciado */
+}
+
+.mv-card {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Fondo degradado */
+    color: white; /* Texto blanco */
+    padding: 3rem; /* Espaciado interno grande */
+    border-radius: 15px; /* Bordes */
+    text-align: center; /* Centrado */
+    box-shadow: 0 10px 30px rgba(30,60,114,0.3); /* Sombra fuerte */
+}
+
+.mv-card h3 {
+    font-size: 2rem; /* Título */
+    margin-bottom: 1rem; /* Espaciado */
+}
+
+.mv-card .icon {
+    font-size: 4rem; /* Tamaño icono */
+    margin-bottom: 1rem; /* Espaciado */
+}
+/* Ocultar texto extra por defecto */
+.texto-extra {
+    display: none;
+}
+
+/* Clase para mostrar el texto progresivamente */
+.texto-extra.mostrar {
+    display: inline;
+}
+
+/* Botón Leer Más */
+.btn-leer-mas {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-leer-mas:hover {
+    background: white;
+    color: #1e3c72;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, #1a2f5a 0%, #1e3c72 100%); /* Fondo del footer */
+    color: white; /* Texto blanco */
+    padding: 3rem 0 1rem 0; /* Espaciado */
+}
+
+.footer-content {
+    display: grid; /* Layout grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo */
+    gap: 2rem; /* Espaciado */
+    margin-bottom: 2rem; /* Separación del texto inferior */
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem; /* Espaciado */
+    font-size: 1.5rem; /* Tamaño texto */
+}
+
+.footer-section ul {
+    list-style: none; /* Quita viñetas */
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem; /* Separación */
+}
+
+.footer-section a {
+    color: rgba(255,255,255,0.8); /* Blanco suave */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s; /* Animación */
+}
+
+.footer-section a:hover {
+    color: white; /* Cambia color */
+}
+
+.footer-bottom {
+    text-align: center; /* Centrado */
+    padding-top: 2rem; /* Espaciado superior */
+    border-top: 1px solid rgba(255,255,255,0.1); /* Línea decorativa */
+    opacity: 0.8; /* Transparencia */
+}
+
+/*java scrip*/
+
+
+/* 💡 ESTILOS PARA LA NUEVA SECCIÓN FAQ (Acordeón JS) */
+#faq {
+    padding-top: 1.0rem; /* Reduce el espacio arriba del título */
+    padding-bottom: 2rem;
+}
+
+#faq .section-title {
+    margin-bottom: 1.5rem; /* Acerca el título a las preguntas */
+}
+
+.faq-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden; /* Esto es clave para que la respuesta oculta no se vea */
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    width: 100%;
+    background: #f4f4f4;
+    color: #1e3c72; /* Color corporativo */
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex; /* Para alinear el texto y el icono */
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #e0e0e0;
+}
+
+.faq-item.active .faq-question {
+    background: #2a5298; /* Fondo azul cuando está activo */
+    color: white;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+/* RESPUESTA OCULTA POR DEFECTO */
+.faq-answer {
+    /* Altura inicial 0, la oculta */
+    max-height: 0; 
+    padding: 0 1.5rem; /* Relleno horizontal */
+    overflow: hidden; /* Oculta el contenido si se excede */
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; 
+}
+
+.faq-answer p {
+    padding: 1rem 0; /* Relleno vertical solo para el texto */
+    border-top: 1px solid #eee; /* Línea de separación sutil */
+    color: #333;
+}
+
+/* ESTADO ACTIVO: LA MAGIA DEL CSS/JS */
+/* Cuando el JS añade la clase 'active', el CSS hace visible la respuesta. */
+.faq-item.active .faq-answer {
+    /* La altura debe ser mayor que el contenido, usamos un valor grande */
+    max-height: 500px; 
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem; /* Se añade el padding de abajo para mostrarlo */
+}
+
+/* Invertir el icono de + a - */
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Gira el icono + 45 grados */
+}
+
+/* Opcional: Estilo para el ítem activo */
+.faq-item.active {
+    border-color: #2a5298;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Menú vertical */
+        gap: 0.5rem; /* Espaciado pequeño */
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Título más pequeño */
+    }
+
+    .section-title {
+        font-size: 2rem; /* Título más pequeño */
+    }
+
+    .contact-info {
+        justify-content: center; /* Centra contactos */
+    }
+}
