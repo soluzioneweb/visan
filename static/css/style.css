@@ -161,7 +161,7 @@ nav {
 /*  SECCION SUPERIOR DE PAGINA  */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-                url('../fonts/empleados.jpg') center/cover;
+                url('../fonts/fondo.jpg') center/cover;
     color: white;
     padding: 6rem 0;
     text-align: center;
